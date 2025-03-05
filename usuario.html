@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html eng="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - Loreowl</title>
+    <title>Loreowl𓅓</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
 
     <div id="loadingScreen">
         <div id="loadingText"><b>LoreOwl</b>
@@ -13,48 +17,28 @@
             </div>
         </div>
     </div>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <div class="Menu">
         <h1>Loreowl𓅓</h1>
-        <ul class="Menuul2">
-            <li><a href="#Sobre" target="_self">Sobre</a></li>
-            <li><a href="#Parceiros">Parceiros</a></li>
-            <li><a href="#contatos">Contatos</a></li>
-        </ul>
+        <ol class="Menuol">
+            <li><a href="./loginpage.html"><button class="logbut" style="color: white;">Login/Cadastro</button></a></li>
+        </ol>
 
-        <div class="wrapper">
-            <div class="profile-icon" id="profileIcon">
-                <i class='bx bxs-user-circle'></i>
-                <span id="userName">Usuário</span>
-                <button class="btn2" id="viewProfile">Ver perfil</button>
-                <a href="./gestao.html"><button id="logout" class="btn">Sair</button></a>
-            </div>
-            <div class="search-container2">
-                <input type="text" id="searchBox" class="search-input" placeholder="Buscar livros...              🔎">
-                <div id="suggestions" class="suggestions"></div>
-            </div>
+        <ul class="Menuul">
+            <li><a href="#Sobre" class="menuSobre" target="_self" style="color: rgb(253, 250, 250);">Sobre</a></li>
+            <li><a href="#Parceiros" style="color: rgb(253, 252, 252);">Parceiros</a></li>
+            <li><a href="#contatos" style="color: rgb(253, 252, 252) ;"> Contatos</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="searchBox" class="search-input" placeholder="Buscar livros...              🔎">
+            <div id="suggestions" class="suggestions"></div>
         </div>
     </div>
 
-
-    </div>
 </head>
 
 <body>
-    <br><br><br><br><br><br>
+    <br><br><br>
     <main class="Principal">
-        <div id="userModal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="closeModal">&times;</span>
-                <img class="modal-img" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Pic.png" alt="">
-                <h2>Perfil do Usuário</h2>
-                <p><strong>Nome:</strong> <span id="modalUserName">Usuário</span></p>
-
-            </div>
-        </div>
-
-
         <section>
             <h1 class="rgb-text">Seja bem-vindo!</h1>
             <p>Espero que encontre o que busca!</p>
@@ -68,10 +52,24 @@
                 <button class="button" id="prevButton1">↤</button>
 
                 <div class="BOOKS" id="booksContainer1">
+                    <div class="l1" id="Poder"
+                        onclick="openBookPage('Poder do hábito','Charles Duhigg','17,56','https:http2.mlstatic.com/D_NQ_NP_2X_683822-MLB44517538285_012021-F.jpg')">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683822-MLB44517538285_012021-F.jpg" alt=""
+                            width="250px">
+                        <h2>Poder do hábito</h2>
+                    </div>
+                    <div class="l1" id="Sapiens"
+                        onclick="openBookPage('Sapiens História breve da humanidade','Yuval Noah Harari','33,76','https:/th.bing.com/th/id/OIP.KPgo7MPKyYOHTUglXXhw6wHaLO?rs=1&pid=ImgDetMain')">
+                        <img src="https://th.bing.com/th/id/OIP.KPgo7MPKyYOHTUglXXhw6wHaLO?rs=1&pid=ImgDetMain" alt=""
+                            width="250px">
+                        <h2>Sapiens História breve da humanidade</h2>
+
+                    </div>
                     <div class="l1" id="A_arte_da_guerra"
                         onclick="openBookPage('A Arte da Guerra', 'Sun Tzu', '29.90', './aaed2f0c9de630f0e83c1a4da57bd3b5.webp')">
                         <img src="./aaed2f0c9de630f0e83c1a4da57bd3b5.webp" alt="A Arte da Guerra" width="250px">
-                        <h2>A Arte da Guerra</h2>
+                        <h2>A Arte da Guerra </h2>
+
                     </div>
                     <div class="l1" id="platao"
                         onclick="openBookPage('Platão', 'Platão', '39.90', './ce0dfca32f7a01f91275d9284670f7eb.webp')">
@@ -138,23 +136,23 @@
                             alt="O Acordo com o Rei Elfo" width="250px">
                         <h2>O Acordo com o Rei Elfo</h2>
                     </div>
-                    <div class="l1" id="volume-3-de-gash-bell"
-                        onclick="openBookPage('Volume 3 de Gash Bell', 'Makoto Raiku', '19.90', 'https:/m.media-amazon.com/images/I/81kL9MR9lbL._AC_UL320_.jpg')">
-                        <img src="https://m.media-amazon.com/images/I/81kL9MR9lbL._AC_UL320_.jpg"
-                            alt="Volume 3 de Gash Bell" width="250px">
-                        <h2>Volume 3 de Gash Bell</h2>
+                    <div class="l1" id="Os filhos de Hurin"
+                        onclick="openBookPage('Os filhos de Hurin', 'J.R.R  TOLKIEN', '42.00', 'https:www.estamosemobras.com.br/wp-content/uploads/2014/11/capa-filhos-de-hurin-656x1024.jpg')">
+                        <img src="https://www.estamosemobras.com.br/wp-content/uploads/2014/11/capa-filhos-de-hurin-656x1024.jpg"
+                            alt="Os filhos de Hurin" width="250px">
+                        <h2>Os filhos de Hurin</h2>
                     </div>
-                    <div class="l1" id="volume-4-de-demon-slayer"
-                        onclick="openBookPage('Volume 4 de Demon Slayer', 'Koyoharu Gotouge', '49.90', 'https:/m.media-amazon.com/images/I/91ZVONTZJGL._SY425_.jpg')">
-                        <img src="https://m.media-amazon.com/images/I/91ZVONTZJGL._SY425_.jpg"
-                            alt="Volume 4 de Demon Slayer" width="250px">
-                        <h2>Volume 4 de Demon Slayer</h2>
+                    <div class="l1" id="a História sem fim"
+                        onclick="openBookPage('A História sem fim', 'Michel ende', '39.90', 'https:www.antroposofica.com.br/lojas/00000472/prod/historia-sem-fim_600.jpg?cccfc=283e2101')">
+                        <img src="https://www.antroposofica.com.br/lojas/00000472/prod/historia-sem-fim_600.jpg?cccfc=283e2101"
+                            alt="A história sem fim" width="250px">
+                        <h2>A história sem fim</h2>
                     </div>
-                    <div class="l1" id="volume-1-de-final-fantasy"
-                        onclick="openBookPage('Volume 1 de Final Fantasy', 'Nojima Kazushige', '59.90', 'https:/m.media-amazon.com/images/I/51g8Yis6fzL._SY445_SX342_.jpg')">
-                        <img src="https://m.media-amazon.com/images/I/51g8Yis6fzL._SY445_SX342_.jpg"
-                            alt="Volume 1 de Final Fantasy" width="250px">
-                        <h2>Volume 1 de Final Fantasy</h2>
+                    <div class="l1" id="A Bússola de Ouro"
+                        onclick="openBookPage('A Bússola de Ouro', 'Phillip Pulman', '30.95', 'https:/3.bp.blogspot.com/-9y3YptB3r3c/Wd7lx3wXclI/AAAAAAAAhnY/h1RNKBIZtA0A-Dy0qzTuz6Ox93fIMP_PgCLcBGAs/s1600/A%2BB%25C3%25BAssola%2Bde%2BOuro.jpg')">
+                        <img src="https://3.bp.blogspot.com/-9y3YptB3r3c/Wd7lx3wXclI/AAAAAAAAhnY/h1RNKBIZtA0A-Dy0qzTuz6Ox93fIMP_PgCLcBGAs/s1600/A%2BB%25C3%25BAssola%2Bde%2BOuro.jpg"
+                            alt="A bussola de ouro" width="250px">
+                        <h2>A bussola de ouro</h2>
                     </div>
                     <div class="l1" id="Eragon"
                         onclick="openBookPage('Eragon', 'Cristhopher Paolini', '27.10', 'https:www.phantastik-couch.de/fileadmin/_processed_/2/8/csm_Eragon_1_-_Paolini_6af65ad037.jpg')">
@@ -208,18 +206,23 @@
                         <h2>Ninguem vai te ouvir gritar</h2>
                     </div>
                     <div class="l1" id="a-ilha-das-almas-selvagens"
-                        onclick="openBookPage('A ilha das almas selvagens', 'Vários Autores', '59.90', 'https:/m.media-amazon.com/images/I/81u7cHnV+KL._SL1500_.jpg')">
+                        onclick="openBookPage('A ilha das almas selvagens', 'H.S WELLS', '59.90', 'https:/m.media-amazon.com/images/I/81u7cHnV+KL._SL1500_.jpg')">
                         <img src="https://m.media-amazon.com/images/I/81u7cHnV+KL._SL1500_.jpg"
                             alt="A ilha das almas selvagens" width="250px">
                         <h2>A ilha das almas selvagens</h2>
                     </div>
-                    <div class="l1" id="O exorcista "
-                        onclick="openBookPage('O Exorcista', 'Peter Blatty', '49.90', 'https:th.bing.com/th/id/R.3f8c2bfde5a023ef0f80b30b280a5361?rik=%2frUzKY%2bRvKmQZQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-kOwG7pwKbvU%2fVXebzRG4fsI%2fAAAAAAAAErM%2faSJWuJbRWQc%2fs1600%2f71RpvDjl2jL._SL1047_.jpg&ehk=jjSpi%2bwUZrs4fzL1vlmevv3H0OBqAhnzGB4MuwK2lXA%3d&risl=&pid=ImgRaw&r=0')">
-                        <img src="https://th.bing.com/th/id/R.3f8c2bfde5a023ef0f80b30b280a5361?rik=%2frUzKY%2bRvKmQZQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-kOwG7pwKbvU%2fVXebzRG4fsI%2fAAAAAAAAErM%2faSJWuJbRWQc%2fs1600%2f71RpvDjl2jL._SL1047_.jpg&ehk=jjSpi%2bwUZrs4fzL1vlmevv3H0OBqAhnzGB4MuwK2lXA%3d&risl=&pid=ImgRaw&r=0"
-                            alt="o exorcista" width="250px">
-                        <h2>O exorcista</h2>
+                    <div class="l1" id="Frankenstein"
+                        onclick="openBookPage('Frankenstein', 'Marry Shelly', '50.00', 'https:/th.bing.com/th/id/OIP.Upr8LqaOgM7Qg4J0JttfjAHaLc?rs=1&pid=ImgDetMain')">
+                        <img src="https://th.bing.com/th/id/OIP.Upr8LqaOgM7Qg4J0JttfjAHaLc?rs=1&pid=ImgDetMain"
+                            alt="Frankenstein" width="250px">
+                        <h2>Frankenstein</h2>
                     </div>
-
+                    <div class="l1" id="A noite_dos_motos_vivos"
+                        onclick="openBookPage('A noite dos mortos vivos', 'Jonh Russo','25.00','https:media.fstatic.com/W55pXqE3a_bLRKTQVw56v27QavQ=/290x478/smart/media/movies/covers/2018/10/3_Imagem.jpg')">
+                        <img src="https://media.fstatic.com/W55pXqE3a_bLRKTQVw56v27QavQ=/290x478/smart/media/movies/covers/2018/10/3_Imagem.jpg"
+                            alt=" A noite dos mortos vivos">
+                        <h2> A noite dos mortos vivos</h2>
+                    </div>
                 </div>
                 <button class="button" id="nextButton3">↦</button>
             </div>
@@ -272,10 +275,11 @@
                         <h2 style="color: black;">O Sol é para Todos</h2>
                     </div>
 
-                    <div class="l1" id="volume-1-tokyo-ghoul"
-                        onclick="openBookPage('Volume 1 Tokyo Ghoul', 'Sui Ishida', '18.90', 'https:d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421580364/tokyo-ghoul-vol-1-9781421580364_hr.jpg')">
-                        <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421580364/tokyo-ghoul-vol-1-9781421580364_hr.jpg" width="250px">
-                        <h2 style="color: black;">Volume 1 Tokyo Ghoul</h2>
+                    <div class="l1" id="A casa dos espiritos"
+                        onclick="openBookPage(' A casa dos espiritos', 'Isabel Alendre', '25.00', 'https:static.fnac-static.com/multimedia/PT/images_produits/PT/ZoomPE/7/5/4/9789720044457/tsp20130314200814/A-Casa-dos-Espiritos.jpg')">
+                        <img src="https://static.fnac-static.com/multimedia/PT/images_produits/PT/ZoomPE/7/5/4/9789720044457/tsp20130314200814/A-Casa-dos-Espiritos.jpg"
+                            width="250px">
+                        <h2 style="color: black;">A casa dos Espiritos</h2>
                     </div>
                 </div>
                 <button class="button" id="nextButton4">↦</button>
@@ -287,45 +291,46 @@
 
                 <button class="button" id="prevButton5">↤</button>
                 <div class="BOOKS" id="booksContainer5">
-                    <div class="l1" id="volume-19-attack-on-titan"
-                        onclick="openBookPage('volume 19 Attack on titan', 'Hajime Isayama', '26.44', 'https:/th.bing.com/th/id/OIP.ULeQI9-bgpTKs4brlmzw1AHaLE?rs=1&pid=ImgDetMain')">
-                        <img src="https://th.bing.com/th/id/OIP.ULeQI9-bgpTKs4brlmzw1AHaLE?rs=1&pid=ImgDetMain"
+
+                    <div class="l1" id="Fundação"
+                        onclick="openBookPage('Fundação', 'Issac Asimov', '50.44', 'https:/static.wixstatic.com/media/4d0333_a2067316b50f4b6581e0058fbbda13c7~mv2.jpg/v1/fill/w_322,h_500,al_c,q_80,enc_auto/4d0333_a2067316b50f4b6581e0058fbbda13c7~mv2.jpghttps:/th.bing.com/th/id/OIP.ULeQI9-bgpTKs4brlmzw1AHaLE?rs=1&pid=ImgDetMain')">
+                        <img src="https://static.wixstatic.com/media/4d0333_a2067316b50f4b6581e0058fbbda13c7~mv2.jpg/v1/fill/w_322,h_500,al_c,q_80,enc_auto/4d0333_a2067316b50f4b6581e0058fbbda13c7~mv2.jpg"
                             width="250px">
-                        <h2 style="color: black;">Volume 19 Attack on Titan</h2>
+                        <h2 style="color: black;">Fundação</h2>
                     </div>
-                    <div class="l1" id="Akira"
-                        onclick="openBookPage('Akira', 'Otomo Katsushiro', '28.50', 'https:/media.senscritique.com/media/000015332347/source_big/Akira.jpg')">
-                        <img src="https://media.senscritique.com/media/000015332347/source_big/Akira.jpg" width="250px">
-                        <h2 style="color: black;">Akira</h2>
+                    <div class="l1" id="admiravel"
+                        onclick="openBookPage('Adimiravel mundo novo', 'Aldous Huxley', '29.50', 'https:th.bing.com/th/id/OIP.dhTb8w_S4WbSLBQ0u6afxwAAAA?rs=1&pid=ImgDetMain')">
+                        <img src="https://th.bing.com/th/id/OIP.dhTb8w_S4WbSLBQ0u6afxwAAAA?rs=1&pid=ImgDetMain"
+                            width="250px">
+                        <h2 style="color: black;">Adimirável mundo novo</h2>
                     </div>
-                    <div class="l1" id="volume-1-the-ghost-in-the-shell"
-                        onclick="openBookPage('volume 1 The Ghost in the Shell', 'Maramune Shidow', '32.90', 'https:/i.pinimg.com/736x/08/53/02/08530277988c7b5d4363645e4c8765af--ghost-in-the-shell-ghosts.jpg')">
-                        <img src="https://i.pinimg.com/736x/08/53/02/08530277988c7b5d4363645e4c8765af--ghost-in-the-shell-ghosts.jpg"
+                    <div class="l1" id="Snow crash"
+                        onclick="openBookPage('Snow crash', 'Neal stephenson', '22.90', 'https:www.businessinsider.de/wp-content/uploads/2016/11/snow-crash.jpg')">
+                        <img src="https://www.businessinsider.de/wp-content/uploads/2016/11/snow-crash.jpg"
                             width="255px">
-                        <h2 style="color: black;">Volume 1 The Ghost in the Shell</h2>
+                        <h2 style="color: black;">Snow crash</h2>
                     </div>
-                    <div class="l1" id="volume-57-one-piece"
-                        onclick="openBookPage('volume 57 de One Piece', 'Eichiiro Oda', '38.90', 'https:/http2.mlstatic.com/D_NQ_NP_2X_825570-MLU50450120793_062022-F.webp')">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_825570-MLU50450120793_062022-F.webp"
+                    <div class="l1" id="o pintassislgo"
+                        onclick="openBookPage('o pintassislgo', 'donna tart', '43.90', 'https:i0.wp.com/bibliotecas.cm-arganil.pt/wp-content/uploads/2018/04/o-pintassilgo.jpg?fit=955%2C1440&ssl=1')">
+                        <img src="https://i0.wp.com/bibliotecas.cm-arganil.pt/wp-content/uploads/2018/04/o-pintassilgo.jpg?fit=955%2C1440&ssl=1"
                             width="255px">
-                        <h2 style="color: black;">Volume 57 de One Piece</h2>
+                        <h2 style="color: black;">o pintassislgo</h2>
                     </div>
-                    <div class="l1" id="volume-10-neon-genesis-evangelion"
-                        onclick="openBookPage('volume 10 neon Genesis Evangelion', 'Yoshiuki Sadamoto', '25.60', 'https:/m.media-amazon.com/images/I/71lT36JaUqL._SY425_.jpg')">
-                        <img src="https://m.media-amazon.com/images/I/71lT36JaUqL._SY425_.jpg" width="250px">
-                        <h2 style="color: black;">Volume 10 Neon Genesis Evangelion</h2>
+                    <div class="l1" id="O tempo e vento"
+                        onclick="openBookPage('O tempo e vento', 'Erico Verissimo', '25.60', 'https:/images-na.ssl-images-amazon.com/images/I/918uO4EaD%2BL.jpg')">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/918uO4EaD%2BL.jpg" width="250px">
+                        <h2 style="color: black;">O tempo e vento parte 1: continente</h2>
                     </div>
-                    <div class="l1" id="volume-1-blame"
-                        onclick="openBookPage('volume 1 Blame', 'Tsutomu Nihei', '27.00', 'https:/media.senscritique.com/media/000018352089/source_big/BLAME_Edition_Deluxe_tome_1.jpg')">
-                        <img src="https://media.senscritique.com/media/000018352089/source_big/BLAME_Edition_Deluxe_tome_1.jpg"
+                    <div class="l1" id="O tempo e vento2"
+                        onclick="openBookPage('O tempo e vento2', 'Erico Verissimo', '25.60', 'https:/image.slidesharecdn.com/otempoeovento-oretrato-ericoverissimo-150703222558-lva1-app6892/95/o-tempo-e-o-vento-o-retrato-erico-verissimo-1-638.jpg?cb=1435962770')">
+                        <img src="https://image.slidesharecdn.com/otempoeovento-oretrato-ericoverissimo-150703222558-lva1-app6892/95/o-tempo-e-o-vento-o-retrato-erico-verissimo-1-638.jpg?cb=1435962770"
                             width="250px">
-                        <h2 style="color: black;">Volume 1 Blame!</h2>
+                        <h2 style="color: black;">O tempo e vento parte 2: continente</h2>
                     </div>
-                    <div class="l1" id="as-cronicas-de-narnia"
-                        onclick="openBookPage('As Crônicas de Nárnia', 'C.S Lewis', '21.35', 'https:/a-static.mlcdn.com.br/800x560/livro-as-cronicas-de-narnia-volume-unico/olistsp/osplbmtnox80xv3h/5ae043fe928949fb5759725383feba94.jpg')">
-                        <img src="https://a-static.mlcdn.com.br/800x560/livro-as-cronicas-de-narnia-volume-unico/olistsp/osplbmtnox80xv3h/5ae043fe928949fb5759725383feba94.jpg"
-                            width="250px">
-                        <h2>As Crônicas de Nárnia</h2>
+                    <div class="l1" id="THE_HOBBIT"
+                        onclick="openBookPage('THE HOBBIT', 'J.R.R. Tolkien', '21.35', 'https:images.thenile.io/r1000/9780007458424.jpg')">
+                        <img src="https://images.thenile.io/r1000/9780007458424.jpg" width="250px">
+                        <h2> The hobbit</h2>
                     </div>
 
                 </div>
@@ -348,11 +353,10 @@
                         <img src="https://http2.mlstatic.com/D_NQ_NP_889524-MLU71324465531_082023-O.webp" width="250px">
                         <h2 style="color: black;">P.S. Eu Te Amo</h2>
                     </div>
-                    <div class="l1" id="volume-6-horimura"
-                        onclick="openBookPage('Volume 6 Horimura', 'HERO', '29.90', 'https:/cdn.shopify.com/s/files/1/0572/5854/1241/products/9780316270137_manga-horimiya-6-primary_jpg_1946x.jpg?v=1676422102')">
-                        <img src="https://cdn.shopify.com/s/files/1/0572/5854/1241/products/9780316270137_manga-horimiya-6-primary_jpg_1946x.jpg?v=1676422102"
-                            width="250px">
-                        <h2 style="color: black;">Volume 6 Horimura</h2>
+                    <div class="l1" id="um amor para recordar"
+                        onclick="openBookPage('um Amor para recordar', 'nicolas sparks', '29.30', 'https:m.media-amazon.com/images/I/71jeQnaNsJL._SL1358_.jpg')">
+                        <img src="https://m.media-amazon.com/images/I/71jeQnaNsJL._SL1358_.jpg" width="250px">
+                        <h2 style="color: black;">um Amor para recordar</h2>
                     </div>
                     <div class="l1" id="um-dia"
                         onclick="openBookPage('Um dia', 'David Richolls', '22.30', 'https:/th.bing.com/th/id/OIP.gdLTbPcZMHUXljoOkj0q-QAAAA?w=129&h=195&c=7&r=0&o=5&pid=1.7')">
@@ -374,7 +378,8 @@
                     </div>
                     <div class="l1" id="memorias-postumas-de-bras-cubas"
                         onclick="openBookPage('Memórias Póstumas de Brás Cubas', 'Machado de Assis', '23.40', 'https:/www.bubok.pt/libro/portadaLivro/4222/6/Memorias-postumas-de-Bras-Cubas.jpg')">
-                        <img src="https:/www.bubok.pt/libro/portadaLivro/4222/6/Memorias-postumas-de-Bras-Cubas.jpg" width="260px">
+                        <img src="https:/www.bubok.pt/libro/portadaLivro/4222/6/Memorias-postumas-de-Bras-Cubas.jpg"
+                            width="260px">
                         <h2 style="color: black;">Memórias Póstumas de Brás Cubas</h2>
                     </div>
 
@@ -399,10 +404,11 @@
                         <img src="https://http2.mlstatic.com/D_NQ_NP_858895-MLU50632114961_072022-O.webp" width="250px">
                         <h2 style="color: black;">Harry Potter e a Criança Amaldiçoada</h2>
                     </div>
-                    <div class="l1" id="volume-16-dragon-ball"
-                        onclick="openBookPage('Volume 16 Dragon Ball', 'Akira Toriyama', '18.90', 'https:/http2.mlstatic.com/D_NQ_NP_987320-MLU77344751946_072024-O.webp')">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_987320-MLU77344751946_072024-O.webp" width="250px">
-                        <h2 style="color: black;">Volume 16 Dragon Ball</h2>
+                    <div class="l1" id="A ilha do tesouro"
+                        onclick="openBookPage('A ilha do tesouro', 'Robert Louis Stevenson', '28.90', 'https:th.bing.com/th/id/OIP.e4640MFHpBVgHOPVqRQGSAAAAA?rs=1&pid=ImgDetMain')">
+                        <img src="https://th.bing.com/th/id/OIP.e4640MFHpBVgHOPVqRQGSAAAAA?rs=1&pid=ImgDetMain"
+                            width="250px">
+                        <h2 style="color: black;"> A ilha do tesouro</h2>
                     </div>
                     <div class="l1" id="senhor-dos-aneis"
                         onclick="openBookPage('Senhor dos Anéis', 'J.R.R. Tolkien', '32.67', 'https:/images-na.ssl-images-amazon.com/images/I/51uNJPlhCzL._SX354_BO1,204,203,200_.jpg')">
@@ -433,9 +439,15 @@
             <div class="container">
                 <button class="button" id="prevButton8">↤</button>
                 <div class="BOOKS" id="booksContainer8">
+                    <div class="l1" id="volume-16-dragon-ball"
+                        onclick="openBookPage('Volume 16 Dragon Ball', 'Akira Toriyama', '18.90', 'https:/http2.mlstatic.com/D_NQ_NP_987320-MLU77344751946_072024-O.webp')">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_987320-MLU77344751946_072024-O.webp" width="250px">
+                        <h2 style="color: black;">Volume 16 Dragon Ball</h2>
+                    </div>
                     <div class="l1" id="volume-1-tokyo-ghoul"
                         onclick="openBookPage('Volume 1 Tokyo Ghoul', 'Sui Ishida', '18.90', 'https:d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421580364/tokyo-ghoul-vol-1-9781421580364_hr.jpg')">
-                        <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421580364/tokyo-ghoul-vol-1-9781421580364_hr.jpg" width="250px">
+                        <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421580364/tokyo-ghoul-vol-1-9781421580364_hr.jpg"
+                            width="250px">
                         <h2 style="color: black;">Volume 1 Tokyo Ghoul</h2>
                     </div>
                     <div class="l1" id="volume-1-blame"
@@ -461,17 +473,117 @@
                             width="255px">
                         <h2 style="color: black;">Volume 1 The Ghost in the Shell</h2>
                     </div>
-                    <div class="l1" id="Akira"
+                    <div class="l1" id="akira"
                         onclick="openBookPage('Akira', 'Otomo Katsushiro', '28.50', 'https:/media.senscritique.com/media/000015332347/source_big/Akira.jpg')">
                         <img src="https://media.senscritique.com/media/000015332347/source_big/Akira.jpg" width="250px">
                         <h2 style="color: black;">Akira</h2>
                     </div>
+                    <div class="l1" id="volume-3-de-gash-bell"
+                        onclick="openBookPage('Volume 3 de Gash Bell', 'Makoto Raiku', '19.90', 'https:/m.media-amazon.com/images/I/81kL9MR9lbL._AC_UL320_.jpg')">
+                        <img src="https://m.media-amazon.com/images/I/81kL9MR9lbL._AC_UL320_.jpg"
+                            alt="Volume 3 de Gash Bell" width="250px">
+                        <h2>Volume 3 de Gash Bell</h2>
+                    </div>
+                    <div class="l1" id="volume-4-de-demon-slayer"
+                        onclick="openBookPage('Volume 4 de Demon Slayer', 'Koyoharu Gotouge', '49.90', 'https:/m.media-amazon.com/images/I/91ZVONTZJGL._SY425_.jpg')">
+                        <img src="https://m.media-amazon.com/images/I/91ZVONTZJGL._SY425_.jpg"
+                            alt="Volume 4 de Demon Slayer" width="250px">
+                        <h2>Volume 4 de Demon Slayer</h2>
+                    </div>
+                    <div class="l1" id="volume-1-de-final-fantasy"
+                        onclick="openBookPage('Volume 1 de Final Fantasy', 'Nojima Kazushige', '59.90', 'https:/m.media-amazon.com/images/I/51g8Yis6fzL._SY445_SX342_.jpg')">
+                        <img src="https://m.media-amazon.com/images/I/51g8Yis6fzL._SY445_SX342_.jpg"
+                            alt="Volume 1 de Final Fantasy" width="250px">
+                        <h2>Volume 1 de Final Fantasy</h2>
+                    </div>
+                    <div class="l1" id="volume-6-horimura"
+                        onclick="openBookPage('Volume 6 Horimura', 'HERO', '29.90', 'https:/cdn.shopify.com/s/files/1/0572/5854/1241/products/9780316270137_manga-horimiya-6-primary_jpg_1946x.jpg?v=1676422102')">
+                        <img src="https://cdn.shopify.com/s/files/1/0572/5854/1241/products/9780316270137_manga-horimiya-6-primary_jpg_1946x.jpg?v=1676422102"
+                            width="250px">
+                        <h2 style="color: black;">Volume 6 Horimura</h2>
+                    </div>
+                    <div class="BOOKS" id="booksContainer5">
+                        <div class="l1" id="volume-19-attack-on-titan"
+                            onclick="openBookPage('volume 19 Attack on titan', 'Hajime Isayama', '26.44', 'https:/th.bing.com/th/id/OIP.ULeQI9-bgpTKs4brlmzw1AHaLE?rs=1&pid=ImgDetMain')">
+                            <img src="https://th.bing.com/th/id/OIP.ULeQI9-bgpTKs4brlmzw1AHaLE?rs=1&pid=ImgDetMain"
+                                width="250px">
+                            <h2 style="color: black;">Volume 19 Attack on Titan</h2>
+                        </div>
+                    </div>
+
                 </div>
                 <button class="button" id="nextButton8">↦</button>
             </div>
 
+            <h1>Religião</h1>
+            <div class="container">
+                <button class="button" id="prevButton9">↤</button>
+                <div class="BOOKS" id="booksContainer9">
+                    <div class="l1" id="Confissões"
+                        onclick="openBookPage('Confissões de Santo Agostinho', 'Santo Agostinho', '25.00', 'https:/http2.mlstatic.com/D_NQ_NP_2X_963238-MLB45005075468_022021-F.jpg')">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_963238-MLB45005075468_022021-F.jpg" alt=""
+                            width="250px">
+                        <h2>Confissões de Santo Agostinho</h2>
+                    </div>
+                    <div class="l1" id="cristianismo"
+                        onclick="openBookPage('Cristianismo Puro e Simples', 'C.S. Lewis', '25.00', 'https:cdn.sistemawbuy.com.br/arquivos/8c26639222dadffbe4f12a314301feba/produtos/6424962db07b3/cristianismo-puro-e-simples-edicao-especial-em-capa-dura-20201111085405-6424962e031c1.jpg')">
+                        <img src="https:cdn.sistemawbuy.com.br/arquivos/8c26639222dadffbe4f12a314301feba/produtos/6424962db07b3/cristianismo-puro-e-simples-edicao-especial-em-capa-dura-20201111085405-6424962e031c1.jpg"
+                            alt="Cristianismo Puro e Simples" width="250px">
+                        <h2>Cristianismo Puro e Simples</h2>
+                    </div>
+                    <div class="l1" id="Problema"
+                        onclick="openBookPage('O Problema do Sofrimento', 'C.S. Lewis', '24.00', 'https:a-static.mlcdn.com.br/800x560/o-problema-do-sofrimento-c-s-lewis-8067702/komunhaolivrariacrista/10012630067/3ee9372d7d47fc1c1f1b3470e8ac2c79.jpg')">
+                        <img src="https://a-static.mlcdn.com.br/800x560/o-problema-do-sofrimento-c-s-lewis-8067702/komunhaolivrariacrista/10012630067/3ee9372d7d47fc1c1f1b3470e8ac2c79.jpg"
+                            alt="O Problema do Sofrimento" width="250px">
+                        <h2>O Problema do Sofrimento</h2>
+                    </div>
+                    <div class="l1" id="em-seus-passos"
+                        onclick="openBookPage('Em Seus Passos o Que Faria Jesus?', 'Charles Sheldon', '28.00', 'https:www.clcportugal.com/_CLCPortugal/images/products/original/169.jpg ')">
+                        <img src="https://www.clcportugal.com/_CLCPortugal/images/products/original/169.jpg"
+                            alt="Em Seus Passos o Que Faria Jesus?" width="250px">
+                        <h2>Em Seus Passos o Que Faria Jesus?</h2>
+                    </div>
+                    <div class="l1" id="Conhecimento"
+                        onclick="openBookPage('O Conhecimento do Deus Santo', 'A.W. Tozer', '26.00', 'https:www.saraivaconteudo.com.br/capas/32/download-o-conhecimento-do-santo-a-w-tozer-ler-online-pdf.jpg')">
+                        <img src="https://www.saraivaconteudo.com.br/capas/32/download-o-conhecimento-do-santo-a-w-tozer-ler-online-pdf.jpg"
+                            alt="O Conhecimento do Deus Santo" width="250px">
 
+                        <h2>O Conhecimento do Deus Santo</h2>
+                    </div>
+                    <div class="l1" id="maltrapilho"
+                        onclick="openBookPage('O Evangelho Maltrapilho', 'Brennan Manning', '27.00', 'https:https:media.s-bol.com/qD1v6zKVWqRp/L7A68vj/550x830.jpg')">
+                        <img src="https://media.s-bol.com/qD1v6zKVWqRp/L7A68vj/550x830.jpg"
+                            alt="O Evangelho Maltrapilho" width="250px">
+                        <h2>O Evangelho Maltrapilho</h2>
+                    </div>
+                    <div class="l1" id="cartas"
+                        onclick="openBookPage('Cartas de um Diabo a seu Aprendiz', 'C.S. Lewis', '23.00', 'https:images-na.ssl-images-amazon.com/images/I/51Ix%2BvLKY4L.jpg')">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51Ix%2BvLKY4L.jpg"
+                            alt="Cartas de um Diabo a seu Aprendiz" width="250px">
+                        <h2>Cartas de um Diabo a seu Aprendiz</h2>
+                    </div>
+                    <div class="l1" id="cidade-de-deus"
+                        onclick="openBookPage('A Cidade de Deus', 'Santo Agostinho', '30.00', 'https:skoob.s3.amazonaws.com/livros/23283/A_CIDADE_DE_DEUS__VOL_2_1239534738B.jpg')">
+                        <img src="https://skoob.s3.amazonaws.com/livros/23283/A_CIDADE_DE_DEUS__VOL_2_1239534738B.jpg"
+                            alt="A Cidade de Deus" width="250px">
+                        <h2>A Cidade de Deus</h2>
+                    </div>
+                    <div class="l1" id="imitacao-de-cristo"
+                        onclick="openBookPage('Imitação de Cristo', 'Tomás de Kempis', '20.00', 'https:img.wook.pt/images/imitacao-de-cristo-tomas-de-kempis/MXwyMTQwNjcwOHwxNzI3NzA3NnwxNTE3ODQ4NjgwMDAw/500x')">
+                        <img src="https://img.wook.pt/images/imitacao-de-cristo-tomas-de-kempis/MXwyMTQwNjcwOHwxNzI3NzA3NnwxNTE3ODQ4NjgwMDAw/500x"
+                            alt="Imitação de Cristo" width="250px">
+                        <h2>Imitação de Cristo</h2>
+                    </div>
+                    <div class="l1" id="o-peregrino"
+                        onclick="openBookPage('O Peregrino', 'John Bunyan', '22.00', 'https:editoradosclassicos.com.br/451-medium_default/O_peregrino_-_John_Bunyan_-_Comentado.jpg')">
+                        <img src="https://editoradosclassicos.com.br/451-medium_default/O_peregrino_-_John_Bunyan_-_Comentado.jpg"
+                            alt="O Peregrino" width="250px">
+                        <h2>O Peregrino</h2>
+                    </div>
 
+                </div>
+                <button class="button" id="nextButton9">↦</button>
+            </div>
             <script src="script.js"></script>
             <script>
                 document.getElementById('prevButton1').addEventListener('click', function () {
@@ -510,6 +622,7 @@
 
                 document.getElementById('nextButton5').addEventListener('click', function () {
                     document.getElementById('booksContainer5').scrollBy({ left: 300, behavior: 'smooth' });
+
                 }); document.getElementById('prevButton6').addEventListener('click', function () {
                     document.getElementById('booksContainer6').scrollBy({ left: -300, behavior: 'smooth' });
                 });
@@ -533,11 +646,17 @@
                 document.getElementById('nextButton8').addEventListener('click', function () {
                     document.getElementById('booksContainer8').scrollBy({ left: 300, behavior: 'smooth' });
                 });
+                document.getElementById('prevButton9').addEventListener('click', function () {
+                    document.getElementById('booksContainer9').scrollBy({ left: -300, behavior: 'smooth' });
+                });
+
+                document.getElementById('nextButton9').addEventListener('click', function () {
+                    document.getElementById('booksContainer9').scrollBy({ left: 300, behavior: 'smooth' });
+                });
 
             </script>
 
             <script>
-
                 const books = [
                     { title: "As Crônicas de Nárnia", link: "https://a-static.mlcdn.com.br/800x560/livro-as-cronicas-de-narnia-volume-unico/olistsp/osplbmtnox80xv3h/5ae043fe928949fb5759725383feba94.jpg", id: "as-cronicas-de-narnia" },
                     { title: "A Chama de Ember", link: "https://m.media-amazon.com/images/I/A1P+ndx6rAL._SY425_.jpg", id: "a-chama-de-ember" },
@@ -582,10 +701,41 @@
                     { title: "Fahrenheit", link: "https://th.bing.com/th/id/R.0265102b2ba3080203cd721f84f2f4fe?rik=h1C7vQlEAGCjCQ&pid=ImgRaw&r=0", id: "Fahrenheit" },
                     { title: "Duna", link: "https://http2.mlstatic.com/D_NQ_NP_703592-MLU70117859400_062023-O.webp", id: "Duna" },
                     { title: "Eragon", link: "https://http2.mlstatic.com/D_NQ_NP_703592-MLU70117859400_062023-O.webp", id: "Eragon" },
-                    { title: "o exorcista", link: "https://th.bing.com/th/id/R.3f8c2bfde5a023ef0f80b30b280a5361?rik=%2frUzKY%2bRvKmQZQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-kOwG7pwKbvU%2fVXebzRG4fsI%2fAAAAAAAAErM%2faSJWuJbRWQc%2fs1600%2f71RpvDjl2jL._SL1047_.jpg&ehk=jjSpi%2bwUZrs4fzL1vlmevv3H0OBqAhnzGB4MuwK2lXA%3d&risl=&pid=ImgRaw&r=0", id: "O exorcista" },
+                    { title: "o exorcista", link: "https://th.bing.com/th/id/R.3f8c2bfde5a023ef0f80b30b280a5361?rik=%2frUzKY%2bRvKmQZQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-kOwG7pwKbvU%2fVXebzRG4fsI%2fAAAAAAAAErM%2faSJWuJbRWQc%2fs1600%2f71RpvDjl2jL._SL1047_.jpg&ehk=jjSpi%2bwUZrs4fzL1vlmevv3H0OBqAhnzGB4MuwK2lXA%3d&risl=&pid=ImgRaw&r=0", id: "O_exorcista" },
                     { title: "Dom Casmurro", link: "https://www.educacaoetransformacao.com.br/wp-content/uploads/2020/03/Dom-Casmurro-Capa-da-obra-1899.jpg", id: "dom-casmurro" },
-                    { title: "Memórias postumas de bras cubas", link: "https://http2.mlstatic.com/D_NQ_NP_606168-MLU50449897442_062022-O.webp", id: "memorias-postumas-de-bras-cubas" }
+                    { title: "Memórias postumas de bras cubas", link: "https://http2.mlstatic.com/D_NQ_NP_606168-MLU50449897442_062022-O.webp", id: "memorias-postumas-de-bras-cubas" },
+                    { title: "O Hobbit", link: "https://images.thenile.io/r1000/9780007458424.jpg", id: "THE_HOBBIT" },
+                    { title: "Frankenstein", link: "https://th.bing.com/th/id/OIP.Upr8LqaOgM7Qg4J0JttfjAHaLc?rs=1&pid=ImgDetMain", id: "Frankenstein" },
+                    { title: "A noite dos mortos vivos", link: "https://media.fstatic.com/W55pXqE3a_bLRKTQVw56v27QavQ=/290x478/smart/media/movies/covers/2018/10/3_Imagem.jpg", id: "A noite_dos_motos_vivos" },
+                    { title: "Sapiens a breve história da humanidade", link: "https://th.bing.com/th/id/OIP.KPgo7MPKyYOHTUglXXhw6wHaLO?rs=1&pid=ImgDetMain", id: "Sapiens" },
+                    { title: "Poder do hábito", link: "https://http2.mlstatic.com/D_NQ_NP_2X_683822-MLB44517538285_012021-F.jpg", id: "Poder" },
+                    { title: "Volume 1 Tokyo Ghoul", link: "https:/d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421580364/tokyo-ghoul-vol-1-9781421580364_hr.jpg", id: "volume-1-tokyo-ghoul" },
+                    { title: " A casa dos Espiritos", link: "https://static.fnac-static.com/multimedia/PT/images_produits/PT/ZoomPE/7/5/4/9789720044457/tsp20130314200814/A-Casa-dos-Espiritos.jpg", id: "A casa dos espiritos" },
+                    { title: "Os filhos de Hurin", link: "https://www.estamosemobras.com.br/wp-content/uploads/2014/11/capa-filhos-de-hurin-656x1024.jpg", id: "Os filhos de Hurin" },
+                    { title: "A história sem fim", link: "https://www.antroposofica.com.br/lojas/00000472/prod/historia-sem-fim_600.jpg?cccfc=283e2101", id: "a História sem fim" },
+                    { title: "A bussola de ouro", link: "https://3.bp.blogspot.com/-9y3YptB3r3c/Wd7lx3wXclI/AAAAAAAAhnY/h1RNKBIZtA0A-Dy0qzTuz6Ox93fIMP_PgCLcBGAs/s1600/A%2BB%25C3%25BAssola%2Bde%2BOuro.jpg", id: "A Bússola de Ouro" },
+                    { title: "um amor para recordar", link: "https://m.media-amazon.com/images/I/71jeQnaNsJL._SL1358_.jpg", id: "um amor para recordar" },
+                    { title: "Fundação", link: "https://static.wixstatic.com/media/4d0333_a2067316b50f4b6581e0058fbbda13c7~mv2.jpg/v1/fill/w_322,h_500,al_c,q_80,enc_auto/4d0333_a2067316b50f4b6581e0058fbbda13c7~mv2.jpg", id: "Fundação" },
+                    { title: "Adimirável mundo novo", link: "https://th.bing.com/th/id/OIP.dhTb8w_S4WbSLBQ0u6afxwAAAA?rs=1&pid=ImgDetMain", id: "admioravel" },
+                    { title: "Snow crash", link: "https://www.businessinsider.de/wp-content/uploads/2016/11/snow-crash.jpg", id: "Snow crash" },
+                    { title: "O pintassislgo", link: "https://i0.wp.com/bibliotecas.cm-arganil.pt/wp-content/uploads/2018/04/o-pintassilgo.jpg?fit=955%2C1440&ssl=1", id: "o pintassislgo" },
+                    { title: "O tempo e vento", link: "https://images-na.ssl-images-amazon.com/images/I/918uO4EaD%2BL.jpg", id: "O tempo e vento" },
+                    { title: "O tempo e vento2", link: "https://image.slidesharecdn.com/otempoeovento-oretrato-ericoverissimo-150703222558-lva1-app6892/95/o-tempo-e-o-vento-o-retrato-erico-verissimo-1-638.jpg?cb=1435962770", id: "O tempo e vento2" },
+                    { title: "A ilha do tesouro", link: "https://th.bing.com/th/id/OIP.e4640MFHpBVgHOPVqRQGSAAAAA?rs=1&pid=ImgDetMain", id: "A ilha do tesouro" },
+                    { title: "Confissões de Santo Agostinho", link: "https://http2.mlstatic.com/D_NQ_NP_2X_963238-MLB45005075468_022021-F.jpg", id: "Confissões" },
+                    { title: "Cristianismo Puro e Simples", link: "https:cdn.sistemawbuy.com.br/arquivos/8c26639222dadffbe4f12a314301feba/produtos/6424962db07b3/cristianismo-puro-e-simples-edicao-especial-em-capa-dura-20201111085405-6424962e031c1.jpg", id: "cristianismo" },
+                    { title: "O Problema do Sofrimento", link: "https://a-static.mlcdn.com.br/800x560/o-problema-do-sofrimento-c-s-lewis-8067702/komunhaolivrariacrista/10012630067/3ee9372d7d47fc1c1f1b3470e8ac2c79.jpg", id:"Problema"},
+                    { title: "Em Seus Passos o Que Faria Jesus?", link: "https://www.clcportugal.com/_CLCPortugal/images/products/original/169.jpg",id:"em-seus-passos" },
+                    { title: "O Conhecimento do Deus Santo", link: "https://www.saraivaconteudo.com.br/capas/32/download-o-conhecimento-do-santo-a-w-tozer-ler-online-pdf.jpg",id:"Conhecimento" },
+                    { title: "O Evangelho Maltrapilho", link: "https://media.s-bol.com/qD1v6zKVWqRp/L7A68vj/550x830.jpg",id:"maltrapilho" },
+                    { title: "Cartas de um Diabo a seu Aprendiz", link: "https://images-na.ssl-images-amazon.com/images/I/51Ix%2BvLKY4L.jpg",id:"cartas" },
+                    { title: "A Cidade de Deus", link: "https://skoob.s3.amazonaws.com/livros/23283/A_CIDADE_DE_DEUS__VOL_2_1239534738B.jpg",id:"cidade-de-deus" },
+                    { title: "Imitação de Cristo",link: "https://img.wook.pt/images/imitacao-de-cristo-tomas-de-kempis/MXwyMTQwNjcwOHwxNzI3NzA3NnwxNTE3ODQ4NjgwMDAw/500x" ,id:"imitacao-de-cristo"},
+                    { title: "O Peregrino", link: "https://editoradosclassicos.com.br/451-medium_default/O_peregrino_-_John_Bunyan_-_Comentado.jpg",id:"o-peregrino" },
                 ];
+
+                    
+                
 
 
                 const searchBox = document.getElementById('searchBox');
@@ -601,13 +751,15 @@
                         if (filteredBooks.length > 0) {
                             filteredBooks.forEach(book => {
                                 const suggestion = document.createElement('a');
-                                suggestion.href = `#${book.id}`;
-                                suggestion.addEventListener('click', (e) => {
-                                    e.preventDefault(); // Impede que o link siga para outra página
-                                    document.getElementById(book.id)?.scrollIntoView({ behavior: 'smooth' });
+                                suggestion.href = '#';  // Impede o redirecionamento
+                                suggestion.textContent = book.title;
+
+                                // Ao clicar, rolar até o livro correspondente
+                                suggestion.addEventListener('click', () => {
+                                    const bookElement = document.getElementById(book.id);
+                                    bookElement.scrollIntoView({ behavior: 'smooth' });
                                 });
 
-                                suggestion.textContent = book.title;
                                 suggestions.appendChild(suggestion);
                             });
                             suggestions.style.display = 'block'; // Mostra as sugestões
@@ -615,7 +767,7 @@
                             suggestions.style.display = 'none'; // Esconde se não houver resultados
                         }
                     } else {
-                        suggestions.style.display = 'none';
+                        suggestions.style.display = 'none'; // Esconde quando o campo está vazio
                     }
                 });
 
@@ -625,26 +777,7 @@
                         suggestions.style.display = 'none';
                     }
                 });
-            </script>
-            <script>
-                const currentUser2 = localStorage.getItem("currentUser") || "Visitante";
-                document.getElementById("userName").textContent = currentUser2;
-                document.getElementById("modalUserName").textContent = currentUser2;
 
-                const modal = document.getElementById("userModal");
-                document.getElementById("viewProfile").addEventListener("click", () => {
-                    modal.style.display = "block";
-                });
-
-                document.getElementById("closeModal").addEventListener("click", () => {
-                    modal.style.display = "none";
-                });
-
-                window.addEventListener("click", (event) => {
-                    if (event.target === modal) {
-                        modal.style.display = "none";
-                    }
-                });
             </script>
         </section>
         <br><br>
@@ -743,16 +876,19 @@
                         </form>
                     </div>
                     <footer style="text-align: center;">&copy;Ryan chaves </footer>
+                </section>
         </main>
     </main>
     <script>
-
+        // Captura o evento submit do formulário
         document.getElementById("CARD").addEventListener("submit", function (e) {
-            e.preventDefault();
+            e.preventDefault(); // Evita o recarregamento da página
 
+            // Captura os valores dos inputs
             const email = document.getElementById("email-ctt").value;
             const number = document.getElementById("number-ctt").value;
 
+            // Busca o usuário no localStorage usando o email
             const userData = localStorage.getItem(email);
 
             if (!userData) {
@@ -760,9 +896,11 @@
                 return;
             }
 
-            const user = JSON.parse(userData);
+            const user = JSON.parse(userData); // Converte os dados salvos no localStorage
 
+            // Verifica a senha
             if (user.password === password) {
+                // Salva o usuário logado no localStorage
                 localStorage.setItem("currentUser", user.username);
                 alert(`Mensagem enviada, ${user.username}!`);
                 window.location.href = "https://www.instagram.com/loreowl_2024/profilecard/?igsh=MT%7ChM2%7C2cGZ3Zg%3D%3D"; // Redireciona para outra página
@@ -775,18 +913,21 @@
         let lastScrollTop = 0;
         let sobre = document.querySelector('.Sobre');
         let colaboradores = document.querySelector('.colaboradores');
-        let mangásSection = document.querySelector('.container');
+        let mangásSection = document.querySelector('.container'); // Agora, estamos pegando o contêiner da seção de mangás
 
         window.addEventListener('scroll', function () {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
+            // Verifica a posição do scroll em relação à posição dos mangás
             let mangásPosition = mangásSection.offsetTop;
             let mangásHeight = mangásSection.offsetHeight;
 
+            // Quando o scroll passar da área de mangás (ou dentro da área) e rolar para baixo
             if (currentScroll > mangásPosition + mangásHeight) {
                 sobre.classList.add('active');
                 colaboradores.classList.add('active');
             } else {
+                // Se o usuário rolar para cima ou estiver na área dos mangás
                 sobre.classList.remove('active');
                 colaboradores.classList.remove('active');
             }
@@ -797,27 +938,6 @@
     </script>
 
     <script>
-
-        const currentUser = localStorage.getItem("currentUser");
-        const userNameSpan = document.getElementById("userName");
-
-        if (currentUser) {
-            userNameSpan.textContent = currentUser;
-        } else {
-            userNameSpan.textContent = "Visitante";
-            document.getElementById("logout").style.display = "none";
-        }
-
-        // Logout
-        document.getElementById("logout").addEventListener("click", function () {
-            localStorage.removeItem("currentUser");
-            alert("Você saiu da sua conta.");
-            window.location.href = "./gestao.html";
-        });
-    </script>
-
-
-    <script>
         window.addEventListener('load', () => {
             const loadingScreen = document.getElementById('loadingScreen');
             setTimeout(() => {
@@ -825,7 +945,6 @@
             }, 1000);
         });
     </script>
-
 </body>
 
 </html>
