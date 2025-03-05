@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Livro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Menu">
+        <h1>LoreOwl𓅓</h1>
+        <a class="A" style="color: white;" href="./gestao.html">Voltar para inicio</a>
+        <a class="A" href="./usuario.html" style="color:white;">Voltar</a>
+    </div>
+    <br><br><br><br><br><br>
+    <main class="book-details">
+        <div class="l1-image">
+            <img id="bookImg" src="" alt="Imagem do Livro">
+        </div>
+        <div class="book-info">
+            <h1 id="bookTitle">Arte da guerra</h1>
+            <h3 id="bookAuthor">Autor: sun-tzu </h3>
+            <p id="bookPrice">Preço: R$39,90</p>
+            <button class="btn" id="buyButton">Comprar</button>
+            <button class="btn" id="lerbutton" onclick="lerLivro()">Ler</button>
+        </div>
+    </main>
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Finalizar Compra</h2>
+            <form id="purchaseForm">
+                <div class="form-group">
+                    <label for="location">Estado:</label>
+                    <select id="location" name="location" required>
+                        <option value="" disabled selected>Selecione sua localização</option>
+                        <option value="ac">Acre</option>
+                        <option value="al">Alagoas</option>
+                        <option value="ap">Amapá</option>
+                        <option value="am">Amazonas</option>
+                        <option value="ba">Bahia</option>
+                        <option value="ce">Ceará</option>
+                        <option value="df">Distrito Federal</option>
+                        <option value="es">Espírito Santo</option>
+                        <option value="go">Goiás</option>
+                        <option value="ma">Maranhão</option>
+                        <option value="mt">Mato Grosso</option>
+                        <option value="ms">Mato Grosso do Sul</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="pa">Pará</option>
+                        <option value="pb">Paraíba</option>
+                        <option value="pr">Paraná</option>
+                        <option value="pe">Pernambuco</option>
+                        <option value="pi">Piauí</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="rn">Rio Grande do Norte</option>
+                        <option value="rs">Rio Grande do Sul</option>
+                        <option value="ro">Rondônia</option>
+                        <option value="rr">Roraima</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="se">Sergipe</option>
+                        <option value="to">Tocantins</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Cidade:</label>
+                    <select name="location" id="location">
+                        <option value="Abadia de Goiás (GO)">Abadia de Goiás (GO)</option>
+                        <option value="Abadia dos Dourados (MG)">Abadia dos Dourados (MG)</option>
+                        <option value="Abadiânia (GO)">Abadiânia (GO)</option>
+                        <option value="Abaeté (MG)">Abaeté (MG)</option>
+                        <option value="Abaetetuba (PA)">Abaetetuba (PA)</option>
+                        <option value="Abaiara (CE)">Abaiara (CE)</option>
+                        <option value="Abaíra (BA)">Abaíra (BA)</option>
+                        <option value="Abare (BA)">Abare (BA)</option>
+                        <option value="Abatiá (PR)">Abatiá (PR)</option>
+                        <option value="Abdon Batista (SC)">Abdon Batista (SC)</option>
+                        <option value="Abel Figueiredo (PA)">Abel Figueiredo (PA)</option>
+                        <option value="Abelardo Luz (SC)">Abelardo Luz (SC)</option>
+                        <option value="Abre Campo (MG)">Abre Campo (MG)</option>
+                        <option value="Abreu e Lima (PE)">Abreu e Lima (PE)</option>
+                        <option value="Acaiaca (MG)">Acaiaca (MG)</option>
+                        <option value="Açailândia (MA)">Açailândia (MA)</option>
+                        <option value="Acajutiba (BA)">Acajutiba (BA)</option>
+                        <option value="Acará (PA)">Acará (PA)</option>
+                        <option value="Acarape (CE)">Acarape (CE)</option>
+                        <option value="Acaraú (CE)">Acaraú (CE)</option>
+                        <option value="Acari (RN)">Acari (RN)</option>
+                        <option value="Acauã (PI)">Acauã (PI)</option>
+                        <option value="Aceguá (RS)">Aceguá (RS)</option>
+                        <option value="Acopiara (CE)">Acopiara (CE)</option>
+                        <option value="Acorizal (MT)">Acorizal (MT)</option>
+                        <option value="Acrelândia (AC)">Acrelândia (AC)</option>
+                        <option value="Açu (RN)">Açu (RN)</option>
+                        <option value="Açucena (MG)">Açucena (MG)</option>
+                        <option value="Adamantina (SP)">Adamantina (SP)</option>
+                        <option value="Adelândia (GO)">Adelândia (GO)</option>
+                        <option value="Adolfo (SP)">Adolfo (SP)</option>
+                        <option value="Adrianópolis (PR)">Adrianópolis (PR)</option>
+                        <option value="Adustina (BA)">Adustina (BA)</option>
+                        <option value="Afogados da Ingazeira (PE)">Afogados da Ingazeira (PE)</option>
+                        <option value="Afonso Bezerra (RN)">Afonso Bezerra (RN)</option>
+                        <option value="Afonso Cláudio (ES)">Afonso Cláudio (ES)</option>
+                        <option value="Afonso Cunha (MA)">Afonso Cunha (MA)</option>
+                        <option value="Afrânio (PE)">Afrânio (PE)</option>
+                        <option value="Afuá (PA)">Afuá (PA)</option>
+                        <option value="Agrestina (PE)">Agrestina (PE)</option>
+                        <option value="Agricolândia (PI)">Agricolândia (PI)</option>
+                        <option value="Agrolândia (SC)">Agrolândia (SC)</option>
+                        <option value="Agronômica (SC)">Agronômica (SC)</option>
+                        <option value="Água Azul do Norte (PA)">Água Azul do Norte (PA)</option>
+                        <option value="Água Boa (MG)">Água Boa (MG)</option>
+                        <option value="Água Boa (MT)">Água Boa (MT)</option>
+                        <option value="Água Branca (AL)">Água Branca (AL)</option>
+                        <option value="Água Branca (PB)">Água Branca (PB)</option>
+                        <option value="Água Branca (PI)">Água Branca (PI)</option>
+                        <option value="Água Clara (MS)">Água Clara (MS)</option>
+                        <option value="Água Comprida (MG)">Água Comprida (MG)</option>
+                        <option value="Água Doce (SC)">Água Doce (SC)</option>
+                        <option value="Água Doce do Maranhão (MA)">Água Doce do Maranhão (MA)</option>
+                        <option value="Água Doce do Norte (ES)">Água Doce do Norte (ES)</option>
+                        <option value="Água Fria (BA)">Água Fria (BA)</option>
+                        <option value="Água Fria de Goiás (GO)">Água Fria de Goiás (GO)</option>
+                        <option value="Água Limpa (GO)">Água Limpa (GO)</option>
+                        <option value="Água Nova (RN)">Água Nova (RN)</option>
+                        <option value="Água Preta (PE)">Água Preta (PE)</option>
+                        <option value="Água Santa (RS)">Água Santa (RS)</option>
+                        <option value="Água Verde (SC)">Água Verde (SC)</option>
+                        <option value="Aguaí (SP)">Aguaí (SP)</option>
+                        <option value="Aguai (SP)">Aguai (SP)</option>
+                        <option value="Aguapé (RS)">Aguapé (RS)</option>
+                        <option value="Aguanil (MG)">Aguanil (MG)</option>
+                        <option value="Águas Belas (PE)">Águas Belas (PE)</option>
+                        <option value="Águas da Prata (SP)">Águas da Prata (SP)</option>
+                        <option value="Águas de Chapecó (SC)">Águas de Chapecó (SC)</option>
+                        <option value="Águas de Lindóia (SP)">Águas de Lindóia (SP)</option>
+                        <option value="Águas de Santa Bárbara (SP)">Águas de Santa Bárbara (SP)</option>
+                        <option value="Águas de São Pedro (SP)">Águas de São Pedro (SP)</option>
+                        <option value="Águas Formosas (MG)">Águas Formosas (MG)</option>
+                        <option value="Águas Frias (SC)">Águas Frias (SC)</option>
+                        <option value="Águas Lindas de Goiás (GO)">Águas Lindas de Goiás (GO)</option>
+                        <option value="Águas Mornas (SC)">Águas Mornas (SC)</option>
+                        <option value="Águas Vermelhas (MG)">Águas Vermelhas (MG)</option>
+                        <option value="Agudo (RS)">Agudo (RS)</option>
+                        <option value="Agudos (SP)">Agudos (SP)</option>
+                        <option value="Agudos do Sul (PR)">Agudos do Sul (PR)</option>
+                        <option value="Águia Branca (ES)">Águia Branca (ES)</option>
+                        <option value="Aguiar (PB)">Aguiar (PB)</option>
+                        <option value="Aguiarnópolis (TO)">Aguiarnópolis (TO)</option>
+                        <option value="Aimorés (MG)">Aimorés (MG)</option>
+                        <option value="Aiquara (BA)">Aiquara (BA)</option>
+                        <option value="Aiuaba (CE)">Aiuaba (CE)</option>
+                        <option value="Aiuruoca (MG)">Aiuruoca (MG)</option>
+                        <option value="Ajuricaba (RS)">Ajuricaba (RS)</option>
+                        <option value="Alagoa (MG)">Alagoa (MG)</option>
+                        <option value="Alagoa Grande (PB)">Alagoa Grande (PB)</option>
+                        <option value="Alagoa Nova (PB)">Alagoa Nova (PB)</option>
+                        <option value="Alagoinha (PB)">Alagoinha (PB)</option>
+                        <option value="Alagoinha (PE)">Alagoinha (PE)</option>
+                        <option value="Alagoinha do Piauí (PI)">Alagoinha do Piauí (PI)</option>
+                        <option value="Alagoinhas (BA)">Alagoinhas (BA)</option>
+                        <option value="Alambari (SP)">Alambari (SP)</option>
+                        <option value="Albertina (MG)">Albertina (MG)</option>
+                        <option value="Alcântara (MA)">Alcântara (MA)</option>
+                        <option value="Alcântaras (CE)">Alcântaras (CE)</option>
+                        <option value="Alcântil (PB)">Alcântil (PB)</option>
+                        <option value="Alcinópolis (MS)">Alcinópolis (MS)</option>
+                        <option value="Alcobaça (BA)">Alcobaça (BA)</option>
+                        <option value="Aldeias Altas (MA)">Aldeias Altas (MA)</option>
+                        <option value="Alecrim (RS)">Alecrim (RS)</option>
+                        <option value="Alegre (ES)">Alegre (ES)</option>
+                        <option value="Alegrete (RS)">Alegrete (RS)</option>
+                        <option value="Alegrete do Piauí (PI)">Alegrete do Piauí (PI)</option>
+                        <option value="Alegria (RS)">Alegria (RS)</option>
+                        <option value="Alenquer (PA)">Alenquer (PA)</option>
+                        <option value="Alexandrina (RS)">Alexandrina (RS)</option>
+                        <option value="Alexânia (GO)">Alexânia (GO)</option>
+                        <option value="Alfredo Chaves (ES)">Alfredo Chaves (ES)</option>
+                        <option value="Alfredo Marcondes (SP)">Alfredo Marcondes (SP)</option>
+                        <option value="Alfredo Vasconcelos (MG)">Alfredo Vasconcelos (MG)</option>
+                        <option value="Alfredo Wagner (SC)">Alfredo Wagner (SC)</option>
+                        <option value="Algodão de Jandaíra (PB)">Algodão de Jandaíra (PB)</option>
+                        <option value="Alhandra (PB)">Alhandra (PB)</option>
+                        <option value="Aliança (PE)">Aliança (PE)</option>
+                        <option value="Aliança do Tocantins (TO)">Aliança do Tocantins (TO)</option>
+                        <option value="Almadina (BA)">Almadina (BA)</option>
+                        <option value="Almas (TO)">Almas (TO)</option>
+                        <option value="Almenara (MG)">Almenara (MG)</option>
+                        <option value="Almendra (PB)">Almendra (PB)</option>
+                        <option value="Aloândia (GO)">Aloândia (GO)</option>
+                        <option value="Alpercata (MG)">Alpercata (MG)</option>
+                        <option value="Alpestre (RS)">Alpestre (RS)</option>
+                        <option value="Alvinlândia (SP)">Alvinlândia (SP)</option>
+                        <option value="Alvinópolis (MG)">Alvinópolis (MG)</option>
+                        <option value="Alvorada (RS)">Alvorada (RS)</option>
+                        <option value="Alvorada (TO)">Alvorada (TO)</option>
+                        <option value="Alvorada de Minas (MG)">Alvorada de Minas (MG)</option>
+                        <option value="Alvorada do Gurguéia (PI)">Alvorada do Gurguéia (PI)</option>
+                        <option value="Alvorada do Norte (GO)">Alvorada do Norte (GO)</option>
+                        <option value="Alvorada do Sul (PR)">Alvorada do Sul (PR)</option>
+                        <option value="Amajari (RR)">Amajari (RR)</option>
+                        <option value="Amambaí (MS)">Amambaí (MS)</option>
+                        <option value="Amapá (AP)">Amapá (AP)</option>
+                        <option value="Amapá do Maranhão (MA)">Amapá do Maranhão (MA)</option>
+                        <option value="Amaporã (PR)">Amaporã (PR)</option>
+                        <option value="Amaraji (PE)">Amaraji (PE)</option>
+                        <option value="Amaral Ferrador (RS)">Amaral Ferrador (RS)</option>
+                        <option value="Amaralina (GO)">Amaralina (GO)</option>
+                        <option value="Amarante (PI)">Amarante (PI)</option>
+                        <option value="Amarante do Maranhão (MA)">Amarante do Maranhão (MA)</option>
+                        <option value="Amargosa (BA)">Amargosa (BA)</option>
+                        <option value="Amaturá (AM)">Amaturá (AM)</option>
+                        <option value="Amélia Rodrigues (BA)">Amélia Rodrigues (BA)</option>
+                        <option value="América Dourada (BA)">América Dourada (BA)</option>
+                        <option value="Americana (SP)">Americana (SP)</option>
+                        <option value="Americano do Brasil (GO)">Americano do Brasil (GO)</option>
+                        <option value="Américo Brasiliense (SP)">Américo Brasiliense (SP)</option>
+                        <option value="Américo de Campos (SP)">Américo de Campos (SP)</option>
+                        <option value="Ametista do Sul (RS)">Ametista do Sul (RS)</option>
+                        <option value="Amontada (CE)">Amontada (CE)</option>
+                        <option value="Amorim (PB)">Amorim (PB)</option>
+                        <option value="Amoroso (PB)">Amoroso (PB)</option>
+                        <option value="Amparo (PB)">Amparo (PB)</option>
+                        <option value="Amparo (SP)">Amparo (SP)</option>
+                        <option value="Amparo de São Francisco (SE)">Amparo de São Francisco (SE)</option>
+                        <option value="Amparo do Serra (MG)">Amparo do Serra (MG)</option>
+                        <option value="Ampére (PR)">Ampére (PR)</option>
+                        <option value="Anadia (AL)">Anadia (AL)</option>
+                        <option value="Anagé (BA)">Anagé (BA)</option>
+                        <option value="Anahy (PR)">Anahy (PR)</option>
+                        <option value="Anajás (PA)">Anajás (PA)</option>
+                        <option value="Anajatuba (MA)">Anajatuba (MA)</option>
+                        <option value="Analândia (SP)">Analândia (SP)</option>
+                        <option value="Anamã (AM)">Anamã (AM)</option>
+                        <option value="Ananás (TO)">Ananás (TO)</option>
+                        <option value="Ananindeua (PA)">Ananindeua (PA)</option>
+                        <option value="Anápolis (GO)">Anápolis (GO)</option>
+                        <option value="Anapu (PA)">Anapu (PA)</option>
+                        <option value="Anapurus (MA)">Anapurus (MA)</option>
+                        <option value="Anastácio (MS)">Anastácio (MS)</option>
+                        <option value="Anaurilândia (MS)">Anaurilândia (MS)</option>
+                        <option value="Anchieta (ES)">Anchieta (ES)</option>
+                        <option value="Anchieta (SC)">Anchieta (SC)</option>
+                        <option value="Andaraí (BA)">Andaraí (BA)</option>
+                        <option value="Andirá (PR)">Andirá (PR)</option>
+                        <option value="Andorinha (BA)">Andorinha (BA)</option>
+                        <option value="Andradas (MG)">Andradas (MG)</option>
+                        <option value="Andradina (SP)">Andradina (SP)</option>
+                        <option value="Andrelândia (MG)">Andrelândia (MG)</option>
+                        <option value="Andrequicé (MG)">Andrequicé (MG)</option>
+                        <option value="Angatuba (SP)">Angatuba (SP)</option>
+                        <option value="Angelândia (MG)">Angelândia (MG)</option>
+                        <option value="Angelica (MS)">Angelica (MS)</option>
+                        <option value="Angelim (PE)">Angelim (PE)</option>
+                        <option value="Angical (BA)">Angical (BA)</option>
+                        <option value="Angical do Piauí (PI)">Angical do Piauí (PI)</option>
+                        <option value="Angico (TO)">Angico (TO)</option>
+                        <option value="Angicos (RN)">Angicos (RN)</option>
+                        <option value="Angra dos Reis (RJ)">Angra dos Reis (RJ)</option>
+                        <option value="Anguera (BA)">Anguera (BA)</option>
+                        <option value="Angul (ES)">Angul (ES)</option>
+                        <option value="Anhanguera (GO)">Anhanguera (GO)</option>
+                        <option value="Anhembi (SP)">Anhembi (SP)</option>
+                        <option value="Anhumas (SP)">Anhumas (SP)</option>
+                        <option value="Anicuns (GO)">Anicuns (GO)</option>
+                        <option value="Anísio de Abreu (PI)">Anísio de Abreu (PI)</option>
+                        <option value="Anita Garibaldi (SC)">Anita Garibaldi (SC)</option>
+                        <option value="Anitápolis (SC)">Anitápolis (SC)</option>
+                        <option value="Anori (AM)">Anori (AM)</option>
+                        <option value="Anta Gorda (RS)">Anta Gorda (RS)</option>
+                        <option value="Antas (BA)">Antas (BA)</option>
+                        <option value="Antônio Almeida (PI)">Antônio Almeida (PI)</option>
+                        <option value="Antônio Cardoso (BA)">Antônio Cardoso (BA)</option>
+                        <option value="Antônio Carlos (MG)">Antônio Carlos (MG)</option>
+                        <option value="Antônio Carlos (SC)">Antônio Carlos (SC)</option>
+                        <option value="Antônio Dias (MG)">Antônio Dias (MG)</option>
+                        <option value="Antônio Gonçalves (BA)">Antônio Gonçalves (BA)</option>
+                        <option value="Antônio João (MS)">Antônio João (MS)</option>
+                        <option value="Antônio Martins (RN)">Antônio Martins (RN)</option>
+                        <option value="Antônio Olinto (PR)">Antônio Olinto (PR)</option>
+                        <option value="Antônio Prado (RS)">Antônio Prado (RS)</option>
+                        <option value="Antônio Prado de Minas (MG)">Antônio Prado de Minas (MG)</option>
+                        <option value="Aparecida (PB)">Aparecida (PB)</option>
+                        <option value="Aparecida (SP)">Aparecida (SP)</option>
+                        <option value="Aparecida d'Oeste (SP)">Aparecida d'Oeste (SP)</option>
+                        <option value="Aparecida de Goiânia (GO)">Aparecida de Goiânia (GO)</option>
+                        <option value="Aparecida do Rio Doce (GO)">Aparecida do Rio Doce (GO)</option>
+                        <option value="Aparecida do Rio Negro (TO)">Aparecida do Rio Negro (TO)</option>
+                        <option value="Aparecida do Taboado (MS)">Aparecida do Taboado (MS)</option>
+                        <option value="Aperibé (RJ)">Aperibé (RJ)</option>
+                        <option value="Apiacá (ES)">Apiacá (ES)</option>
+                        <option value="Apiacás (MT)">Apiacás (MT)</option>
+                        <option value="Apiaí (SP)">Apiaí (SP)</option>
+                        <option value="Apicum-Açu (MA)">Apicum-Açu (MA)</option>
+                        <option value="Apiúna (SC)">Apiúna (SC)</option>
+                        <option value="Apodi (RN)">Apodi (RN)</option>
+                        <option value="Aporá (BA)">Aporá (BA)</option>
+                        <option value="Aporema (TO)">Aporema (TO)</option>
+                        <option value="Aporé (GO)">Aporé (GO)</option>
+                        <option value="Apuarema (BA)">Apuarema (BA)</option>
+                        <option value="Apucarana (PR)">Apucarana (PR)</option>
+                        <option value="Aracaju (SE)">Aracaju (SE)</option>
+                        <option value="Araçagi (PB)">Araçagi (PB)</option>
+                        <option value="Araçaí (MG)">Araçaí (MG)</option>
+                        <option value="Araçariguama (SP)">Araçariguama (SP)</option>
+                        <option value="Araçás (BA)">Araçás (BA)</option>
+                        <option value="Araçatuba (SP)">Araçatuba (SP)</option>
+                        <option value="Araci (BA)">Araci (BA)</option>
+                        <option value="Aracoiaba (CE)">Aracoiaba (CE)</option>
+                        <option value="Araçoiaba (PE)">Araçoiaba (PE)</option>
+                        <option value="Araçoiaba da Serra (SP)">Araçoiaba da Serra (SP)</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Número de Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Forma de Pagamento:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="credit-card">Cartão de Crédito</option>
+                        <option value="boleto">Boleto</option>
+                        <option value="pix">PIX</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Finalizar Compra</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const buyButton = document.getElementById('buyButton');
+        const buyModal = document.getElementById('buyModal');
+        const closeModal = document.getElementById('closeModal');
+        const purchaseForm = document.getElementById('purchaseForm');
+
+        buyButton.addEventListener('click', () => {
+            buyModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', () => {
+            buyModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === buyModal) {
+                buyModal.style.display = 'none';
+            }
+        });
+
+        purchaseForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Compra realizada com sucesso!');
+            buyModal.style.display = 'none';
+        });
+        function lerLivro() {
+            const params = new URLSearchParams(window.location.search);
+            const title = params.get('title');
+            const text = params.get('text') || 'Texto padrão para este livro.';
+
+            // Redireciona para leitura.html com os dados do livro
+            window.location.href = `leitura.html?title=${encodeURIComponent(title)}&text=${encodeURIComponent(text)}`;
+        }
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('bookTitle').innerText = params.get('title');
+        document.getElementById('bookAuthor').innerText = 'Autor: ' + params.get('author');
+        document.getElementById('bookPrice').innerText = 'Preço: R$' + params.get('price');
+        document.getElementById('bookImg').src = params.get('img');
+        
+    </script>
+    
+</body>
+
+</html>
