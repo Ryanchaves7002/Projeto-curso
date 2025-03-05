@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Menu">
+        <h1>LoreOwl𓅓</h1>
+        <a  class="A" href="javascript:history.back()" style="color: white; ">Voltar ao livro</a>
+    </div>
+
+    <main class="reading-section">
+        <br><br><br><br>
+        <h1 id="bookTitle"></h1>
+        <div id="bookTextArea">    
+            <p id="bookText"></p>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quod expedita similique magni iusto eveniet delectus, deserunt eum sint sunt tempore, impedit accusantium aspernatur rerum, est beatae nisi. Aliquam, quod.</h3>
+    
+        </div>
+    </main>
+
+    <script>
+        // Obtém os parâmetros da URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Captura os valores de 'title' e 'text'
+        const title = params.get('title') || 'Título não encontrado';
+        const text = params.get('text') || 'Texto não disponível para este livro.';
+
+        // Preenche as informações na página
+        document.getElementById('bookTitle').innerText = title;
+        document.getElementById('bookText').innerText = decodeURIComponent(text); // Decodifica o texto
+        document.getElementById('textbook').innerText = 'text:' +params.get('text')
+
+        const Params = new URLSearchParams(window.location.search);
+        document.getElementById('bookTitle').innerText = params.get('title');
+        document.getElementById('bookAuthor').innerText = 'Autor: ' + params.get('author');
+        document.getElementById('bookPrice').innerText = 'Preço: R$' + params.get('price');
+        document.getElementById('bookImg').src = params.get('img');
+        
+    </script>
+    scr
+</body>
+
