@@ -55,6 +55,7 @@
  h1 {
      margin: 0;
      padding: 10px;
+     
  }
 
  .Menu h1{
@@ -291,9 +292,8 @@ text-decoration: underline;
  .books-container {
      display: flex;
      align-items: center;
-     /* Centraliza os elementos verticalmente */
      justify-content: center;
-     /* Alinha horizontalmente */
+
  }
 
  .button {
@@ -340,17 +340,13 @@ text-decoration: underline;
      background-image: linear-gradient(white, purple);
      z-index: 10;
      opacity: 0;
-     /* Inicialmente invisível */
      transform: translateY(-100%);
-     /* Inicialmente fora da tela */
      transition: opacity 0.5s ease, transform 0.5s ease;
  }
 
  .Sobre.active {
      opacity: 1;
-     /* Torna visível */
      transform: translateY(0);
-     /* Move a seção para a posição original */
  }
  .Sobre img {
      margin-top: -600px;
@@ -598,6 +594,17 @@ text-decoration: underline;
      height: 50px;
      width: 150px;
  }
+ .btn-ler{
+    padding: 10px;
+    margin: 4px;
+    cursor: pointer;
+    background:rgb(131, 126, 126);
+    color:#8400ff;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    width: 150px;
+}
 .btn2{
     padding: 10px;
      margin: 5px;
@@ -613,7 +620,7 @@ text-decoration: underline;
      color: #fcf9f9;
      background: linear-gradient(135deg, #1A0F23, #311740, #4A2066, #6B2D91, #8A3CBF);
      border-radius: 40px;
-     width: 70px;
+     width: 120px;
      height: 40px;
      font-family: fantasy;
      font-style: italic;
@@ -628,12 +635,12 @@ text-decoration: underline;
      min-height: 50px;
      display: inline-flex;
      font-family: 'Nunito', sans-serif;
-     font-size: 20px;
+     font-size: 10px;
      align-items: center;
      justify-content: center;
      text-transform: uppercase;
      text-align: center;
-     letter-spacing: 1.3px;
+     letter-spacing: 1px;
      font-weight: 700;
      color: #313133;
      background: #82168b;
@@ -651,7 +658,7 @@ text-decoration: underline;
  .logbut::before {
      content: '';
      border-radius: 1000px;
-     min-width: calc(100px + 2px);
+     min-width: calc(120px + 2px);
      min-height: calc(50px + 2px);
      border: 6px solid #6B2D91;
      box-shadow: 0 0 60px rgba(185, 36, 148, 0.64);
